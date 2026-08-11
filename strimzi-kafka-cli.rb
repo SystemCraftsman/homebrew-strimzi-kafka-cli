@@ -3,8 +3,8 @@ class StrimziKafkaCli < Formula
 
   desc "Command Line Interface for Strimzi Kafka Operator"
   homepage "https://strimzi-cli.dev"
-  url "https://files.pythonhosted.org/packages/56/d8/cc4c26918273aeab33a313e22cffa32183276ad07f67f5fae1c25d4a9046/strimzi_kafka_cli-1.0.0b10.tar.gz"
-  sha256 "dec8e10f5c82060c3a42cff921e94be9f16fd7b27675b32c38db766dd5893730"
+  url "https://files.pythonhosted.org/packages/f3/09/0d348828924b736d8435a475a9c585443ecdddaabaa5aa523e193a080ce4/strimzi_kafka_cli-1.0.0b11.tar.gz"
+  sha256 "8fa06b50eeea63b57620c69a8d96d534a4a455460e454c9e6a9f85893cf2e63a"
   license "Apache-2.0"
 
   depends_on "python@3.12"
