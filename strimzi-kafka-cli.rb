@@ -11,7 +11,15 @@ class StrimziKafkaCli < Formula
 
   def install
     venv = virtualenv_create(libexec, Formula["python@3.12"].opt_bin/"python3.12")
-    system Formula["python@3.12"].opt_bin/"python3.12", "-m", "pip", "--python=#{libexec}/bin/python", "install", "strimzi-kafka-cli[mcp]==#{version}"
+    system Formula["python@3.12"].opt_bin/"python3.12", "-m", "pip",
+           "--python=#{libexec}/bin/python", "install",
+           "strimzi-kafka-cli==#{version}"
+    bin.install_symlink libexec/"bin/kfk"
+  end
+
+  def post_install
+    system Formula["python@3.12"].opt_bin/"python3.12", "-m", "pip",
+           "--python=#{libexec}/bin/python", "install", "fastmcp"
   end
 
   test do
