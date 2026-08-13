@@ -3,14 +3,15 @@ class StrimziKafkaCli < Formula
 
   desc "Command Line Interface for Strimzi Kafka Operator"
   homepage "https://strimzi-cli.dev"
-  url "https://files.pythonhosted.org/packages/a9/75/1b4b73e550224cd0b7bed1c6f5aeb175c34055bdc9f606e57894138c0d32/strimzi_kafka_cli-1.0.0b12.tar.gz"
-  sha256 "38a6f31b7fa462c397b5110c8db779cc4c4100ade6b60871c5eca93d6b500133"
+  url "https://files.pythonhosted.org/packages/84/37/4199817701f0a8d366640abe03339d293c737fba8a65fdbc67535c400792/strimzi_kafka_cli-1.0.0b13.tar.gz"
+  sha256 "970df9d0952dd10b2e16c524f762b4f51d6e694df0d1e98d0fc831c16b54ae74"
   license "Apache-2.0"
 
   depends_on "python@3.12"
 
   def install
     virtualenv_install_with_resources
+    system libexec/"bin/pip", "install", "fastmcp"
   end
 
   test do
